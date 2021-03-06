@@ -1,0 +1,50 @@
+<html>
+	<head>
+    	<title>Timing Functions in JS</title>
+        <script type="text/javascript">
+		
+			// setTimeout() Method & clearTimeout Method
+			/*function printMsg()
+			{
+				document.getElementById("op").innerHTML="5 seconds have passed.";
+			
+			}	
+			function start()
+			{
+				ID = window.setTimeout(printMsg,5000);	
+			}
+			function stop()
+			{
+				window.clearTimeout(ID);	
+			}
+			*/
+			
+			// setInterval() Method & clearInterval Method
+			
+			var ID = 0;
+			var seconds = 0;
+			function printMsg()
+			{
+				document.getElementById("op").innerHTML=seconds+" seconds";
+				seconds++;
+			
+			}	
+			function start()
+			{
+				ID = window.setInterval(printMsg,1000);	
+			}
+			function stop()
+			{
+				window.clearInterval(ID);	
+			}
+		</script>
+    </head>
+    <body>
+    	<form>
+        	<button type="button" id="btnAdd" onClick="start()">Start</button>
+            <h2 id="op">Some Text</h2>
+            <button type="button" id="btnStop" onClick="stop()">Stop</button>
+        </form>
+        
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+	<head>
+    	<title>User Form Validations in JS</title>
+        <script type="text/javascript">
+		
+			// User Form Validations
+				function validate()
+				{
+					var username=document.getElementById("uname");
+					var password=document.getElementById("upass");
+					
+					if(username.value.trim() =="" || password.value.trim() =="")
+					{
+						alert("No blank values allowed.");
+						return false;	
+					}
+					else
+					{
+						true;
+					}
+				}
+		</script>
+    </head>
+    <body>
+    	<h2 id="heading2">Login Form</h2>
+        <form onSubmit="return validate()" action="welcome message.html">
+        	<input type="text" id="uname" placeholder="Username" /><br /><br />
+        	<input type="password" id="upass" placeholder="Password" /><br /><br />
+    		<button type="submit" onClick="validate()">Submit</button>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+	<head>
+    	<title>getElementById Method in JS</title>
+        <script type="text/javascript">
+		
+			//taking input from user in JS
+			
+				function fn1()
+				{
+				
+					var select = document.getElementById("selectbox");
+					alert(select.options[select.selectedIndex].value)
+				}
+		</script>
+    </head>
+    <body>
+    	<select id="selectbox">
+        	<option value="CS">CS</option>
+            <option value="ME">ME</option>
+            <option value="CE">CE</option>
+            <option value="EE">EE</option>
+        </select><br><br>
+        <button onClick="fn1()" id="btn1">Click Me</button>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+	<head>
+    	<title>Regular Expression in JS</title>
+        <script type="text/javascript">
+			function validate()
+			{
+				var username = document.getElementById("uname").value;
+				
+				// Basic Regular Expression
+				var regx = /E00/;
+				
+				/* Regular Expression Characyer Sets and Range
+				
+				 var regx = /[a-f]001/;
+				 var regx = /[001]simple/;
+				 var regx = /[ABc]001/;
+				 
+				 var regx = /[^a-f]001/; // ^using for neglectiong range
+				 
+				*/
+				
+				if(regx.test(username))
+				{
+					alert("Valid Username");	
+				}
+				else
+				{
+					document.getElementById("labeluser").style.visibility="visible";			
+				}	
+			}	
+		</script>
+    </head>
+    <body>
+    		<form action="welcome message.html">
+        	<input type="text" id="uname" placeholder="Username" />
+            <label id="labeluser" style="color:red;visibility:hidden">Invalid User</label><br /><br />
+            
+            <button type="button" onClick="validate()">Submit</button>
+        </form>
+    
+    </body>
+</html>

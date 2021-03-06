@@ -1,0 +1,52 @@
+<html>
+	<head>
+    	<title>User Form Validations in JS</title>
+        <script type="text/javascript">
+		
+			// User Form Validations WITH RED LABEL
+				function validate()
+				{
+					var username=document.getElementById("uname");
+					var password=document.getElementById("upass");
+					
+					if(username.value.trim() =="")
+					{
+						uname.style.border = "solid 2px red";
+						document.getElementById("labeluser").style.visibility="visible";
+						return false;	
+					}
+					else if(password.value.trim() =="") 
+					{
+						upass.style.border = "solid 2px blue";
+						document.getElementById("labelpass").style.visibility="visible";
+						return false;	
+					}
+					else if( password.value.trim().length<5)
+					{
+						upass.style.border = "solid 2px red";
+						//alert("Password too short")
+						document.getElementById("labelpass_short").style.visibility="visible";
+						return false;	
+					}
+					else
+					{
+						return true;
+					}
+				}
+		</script>
+    </head>
+    <body>
+    	<h2 id="heading2">Login Form</h2>
+        <form onSubmit="return validate()" action="welcome message.html">
+        	<input type="text" id="uname" placeholder="Username" />
+            <label id="labeluser" style="color:red;visibility:hidden">Invalid User</label><br /><br />
+            
+        	<input type="password" id="upass" placeholder="Password" />
+    		<label id="labelpass" style="color:red;visibility:hidden">Invalid Password</label><br /><br />
+            
+            <label id="labelpass_short" style="color:red;visibility:hidden">Password too short</label><br><br>
+            
+            <button type="submit" onClick="validate()">Submit</button>
+        </form>
+    </body>
+</html>

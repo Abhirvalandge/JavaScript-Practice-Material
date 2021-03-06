@@ -1,0 +1,33 @@
+<html>
+	<head>
+    	<title>getElementById Method in JS</title>
+        <script type="text/javascript">
+		
+			//taking input from user in JS
+			
+				function fn1()
+				{
+				
+					var rd1 = document.getElementById("rd1");
+					var rd2 = document.getElementById("rd2");
+					
+					if(rd1.checked==true)
+						alert("The selected name is : "+rd1.value);
+					
+					else if(rd2.checked==true)
+						alert("The selected name is : "+rd2.value);
+						
+					else
+						alert("Nothing Selected");
+					
+				
+				
+				}
+		</script>
+    </head>
+    <body>
+    	<input type="radio" name="grp1" id="rd1" value="Abhirva">Abhirva<br><br>
+        <input type="radio" name="grp2" id="rd2" value="Landge">Landge<br><br>
+        <button onClick="fn1()" id="btn1">Click Me</button>
+    </body>
+</html>

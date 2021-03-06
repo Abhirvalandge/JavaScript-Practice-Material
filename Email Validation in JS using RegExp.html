@@ -1,0 +1,33 @@
+<html>
+	<head>
+    	<title>Regular Expression in JS</title>
+        <script type="text/javascript">
+			function validate()
+			{
+				var text = document.getElementById("text1").value;
+				
+				// Email Validation  using Regular Expression
+				 var regx = /^([a-z 0-9\.-]+)@([a-z0-9-]+).([a-z]{2,8})(.[a-z]{2,8})?$/; 
+				
+				if(regx.test(text))
+				{
+					document.getElementById("labeluser").innerHTML="Valid";							                    document.getElementById("labeluser").style.visibility="visible";			
+					document.getElementById("labeluser").style.color="green";				
+				}
+				else
+				{
+					document.getElementById("labeluser").innerHTML="Invalid";							                    document.getElementById("labeluser").style.visibility="visible";			
+					document.getElementById("labeluser").style.color="red";				
+				}	
+			}	
+		</script>
+    </head>
+    <body>
+    	<form>
+        	<input type="text" id="text1" placeholder="Enter Email" />
+            <label id="labeluser" style="color:red;visibility:hidden">Invalid User</label><br /><br />
+            <button type="button" onClick="validate()">Submit</button>
+        </form>
+        
+    </body>
+</html>
